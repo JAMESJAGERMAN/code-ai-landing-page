@@ -1,0 +1,479 @@
+.docWrap {
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+  overflow-x: auto;
+  padding: 0 0.5rem;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.35rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  position: relative;
+}
+
+.tab:hover {
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.02);
+}
+
+.tabActive {
+  color: #00d4aa !important;
+  border-bottom-color: #00d4aa;
+  background: rgba(0,212,170,0.04);
+}
+
+.tabIcon {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.tabActive .tabIcon {
+  opacity: 1;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  padding: 2.5rem;
+}
+
+.contentTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #fff, rgba(255,255,255,0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contentDesc {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  max-width: 680px;
+}
+
+.contentDesc code {
+  font-size: 0.85rem;
+  padding: 0.15rem 0.45rem;
+  background: rgba(0,212,170,0.08);
+  border-radius: 4px;
+  color: #00d4aa;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.heroLine {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.heroBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  background: rgba(0,212,170,0.1);
+  border: 1px solid rgba(0,212,170,0.2);
+  color: #00d4aa;
+}
+
+.subTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.75rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ===== STEP CARDS ===== */
+.stepCard {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.stepCard:hover {
+  border-color: rgba(0,212,170,0.12);
+  background: rgba(0,212,170,0.02);
+}
+
+.stepNum {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00d4aa, #0099ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+
+.stepBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.stepBody h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.stepBody h4 code {
+  font-size: 0.9rem;
+  color: #00d4aa;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.stepBody > p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.stepBody > p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CODE BLOCKS ===== */
+.codeBlock {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.75rem 0;
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.codeLang {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.25);
+}
+
+.codeCopy {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  background: none;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.codeCopy:hover {
+  color: #00d4aa;
+  border-color: rgba(0,212,170,0.3);
+  background: rgba(0,212,170,0.05);
+}
+
+.codeBody {
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.codeLine {
+  display: flex;
+  padding: 0 1rem;
+  white-space: pre;
+}
+
+.lineNum {
+  width: 2rem;
+  text-align: right;
+  padding-right: 1rem;
+  color: rgba(255,255,255,0.1);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.lineText {
+  flex: 1;
+}
+
+.cmd { color: #e6e6e6; }
+.output { color: rgba(255,255,255,0.45); }
+.comment { color: #6a9955; }
+.keyword { color: #569cd6; }
+.string { color: #ce9178; }
+.success { color: #00d4aa; }
+
+/* ===== PARAM TABLE ===== */
+.tableWrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.7rem 0.85rem;
+  color: rgba(255,255,255,0.35);
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.table td {
+  padding: 0.65rem 0.85rem;
+  color: rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  line-height: 1.5;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table code {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  background: rgba(0,212,170,0.08);
+  border-radius: 3px;
+  color: #00d4aa;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.table tr:hover td {
+  background: rgba(255,255,255,0.015);
+}
+
+.typeTag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+}
+
+/* ===== TIPS ===== */
+.tip {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: rgba(0,212,170,0.04);
+  border: 1px solid rgba(0,212,170,0.1);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+.tip strong {
+  color: #00d4aa;
+}
+
+.tip code {
+  font-size: 0.82rem;
+  padding: 0.1rem 0.4rem;
+  background: rgba(0,212,170,0.1);
+  border-radius: 3px;
+  color: #00d4aa;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* ===== ARCHITECTURE ===== */
+.archBox {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.archTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.archFlow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.archStep {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: rgba(0,212,170,0.06);
+  border: 1px solid rgba(0,212,170,0.12);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #00d4aa;
+}
+
+.archDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d4aa;
+}
+
+.archArrow {
+  color: rgba(255,255,255,0.15);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.archList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.archList li {
+  padding: 0.35rem 0 0.35rem 1.4rem;
+  position: relative;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+.archList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d4aa;
+  opacity: 0.4;
+}
+
+/* ===== INTEGRATIONS ===== */
+.integGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.integCard {
+  padding: 1.35rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.integCard:hover {
+  border-color: rgba(0,212,170,0.15);
+  transform: translateY(-2px);
+  background: rgba(0,212,170,0.02);
+}
+
+.integIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0,212,170,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: #00d4aa;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.integCard h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.integCard p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .content { padding: 1.5rem; }
+  .integGrid { grid-template-columns: repeat(2, 1fr); }
+  .archFlow { flex-direction: column; }
+  .archArrow { transform: rotate(90deg); }
+}
+
+@media (max-width: 640px) {
+  .content { padding: 1.25rem; }
+  .tab { padding: 0.75rem 1rem; font-size: 0.8rem; }
+  .stepCard { flex-direction: column; }
+  .integGrid { grid-template-columns: 1fr; }
+}

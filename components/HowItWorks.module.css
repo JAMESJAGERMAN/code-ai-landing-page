@@ -1,0 +1,46 @@
+.steps {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  border-color: rgba(0,212,170,0.15);
+  background: rgba(0,212,170,0.03);
+}
+
+.num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00d4aa, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .steps { flex-direction: column; }
+}

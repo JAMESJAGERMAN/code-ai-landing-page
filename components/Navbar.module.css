@@ -1,0 +1,115 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.logoCode { color: #fff; }
+.logoDot { color: #00d4aa; }
+.logoAi {
+  background: linear-gradient(135deg, #00d4aa, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s ease;
+}
+
+.links a:hover { color: #fff; }
+
+.cta {
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #00d4aa, #0099ff);
+  color: #0a0a0a !important;
+  font-weight: 600 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0,212,170,0.3);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburgerActive span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburgerActive span:nth-child(2) { opacity: 0; }
+.hamburgerActive span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 640px) {
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: rgba(10,10,10,0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    transition: right 0.4s ease;
+    border-left: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .open { right: 0; }
+
+  .hamburger { display: flex; }
+}
